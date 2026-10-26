@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <section class="card">
+            <div class="header">
+                <div>
+                    <p class="subtitle">RECORD MANAGEMENT</p>
+                    <h1>CRUD Operations</h1>
+                    <p class="description">Create, manage and organize your records.</p>
+                </div>
+                <div class="record-count">
+                    <span id="recordCount">0</span>
+                    <small>Records</small>
+                </div>
+            </div>
+
+```
+        <div class="toolbar">
+            <input type="search" id="searchInput" placeholder="Search by name or email">
+            <button type="button" id="addButton" class="add-button">+ Add New</button>
+        </div>
+
+        <section id="formPanel" class="form-panel" hidden>
+            <h2 id="formTitle">Add New Record</h2>
+            <form id="userForm">
+                <div class="form-grid">
+                    <label>
+                        Full Name
+                        <input type="text" id="name" placeholder="Enter full name" required maxlength="80">
+                    </label>
+
+                    <label>
+                        Email Address
+                        <input type="email" id="email" placeholder="Enter email address" required maxlength="120">
+                    </label>
+                </div>
+
+                <p id="formError" class="form-error" role="alert"></p>
+
+                <div class="form-actions">
+                    <button type="submit" id="saveButton" class="save-button">Save Record</button>
+                    <button type="button" id="cancelButton" class="cancel-button">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <div class="table-heading">
+            <h2>All Records</h2>
+            <span id="resultCount">0 results</span>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="userTable"></tbody>
+            </table>
+        </div>
+
+        <div id="emptyState" class="empty-state">
+            <div class="empty-icon">＋</div>
+            <h3 id="emptyTitle">No records yet</h3>
+            <p id="emptyDescription">Click Add New to create your first record.</p>
+            <button type="button" id="emptyAddButton">Create Your First Record</button>
+        </div>
+
+        <footer>
+            <span>CRUD Management System</span>
+            <span>Data saved in your browser</span>
+        </footer>
+    </section>
+</main>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+```
+
+</body>
+</html>
